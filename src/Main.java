@@ -9,11 +9,14 @@ public class Main
         System.out.println(result);
     }
 
-    static class RomansNumbers {
+    static class RomansNumbers 
+    {
         int numR;
 
-        public int romanToArabic(String num) throws Exception {
-            switch (num) {
+        public int romanToArabic(String num) throws Exception 
+        {
+            switch (num) 
+            {
                 case "I" -> numR = 1;
                 case "II" -> numR = 2;
                 case "III" -> numR = 3;
@@ -30,8 +33,10 @@ public class Main
 
         }
 
-        public String arabicToRoman(int num) {
-            String[] romanNum = {
+        public String arabicToRoman(int num) 
+        {
+            String[] romanNum = 
+            {
                     "O", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"
             };
             return romanNum[num];
@@ -48,7 +53,8 @@ public class Main
         int result;
         char romanNum1 = numbers[0].charAt(0);
         char romanNum2 = numbers[2].charAt(0);
-        if ((romanNum1 == 'I' || romanNum1 == 'V' || romanNum1 == 'X') && (romanNum2 == 'I' || romanNum2 == 'V' || romanNum2 == 'X')) {
+        if ((romanNum1 == 'I' || romanNum1 == 'V' || romanNum1 == 'X') && (romanNum2 == 'I' || romanNum2 == 'V' || romanNum2 == 'X')) 
+        {
             RomansNumbers convert = new RomansNumbers();
             int operand1 = convert.romanToArabic(numbers[0]);
             int operand2 = convert.romanToArabic(numbers[2]);
@@ -58,25 +64,32 @@ public class Main
                 case "*" -> result = operand1 * operand2;
                 case "/" -> result = operand1 / operand2;
                 default -> throw new Exception("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
-            }
-            if (result > 0) {
+        }
+            if (result > 0) 
+            {
                 resultStr = convert.arabicToRoman(result);
             } else throw new Exception("В римской системе нет отрицательных чисел");
 
-        } else {
+        } 
+        else 
+        {
             int numAr1 = 0;
             int numAr2 = 0;
             try {
                 numAr1 = Integer.parseInt(numbers[0]);
                 numAr2 = Integer.parseInt(numbers[2]);
-            } catch (NumberFormatException e) {
+            } 
+            catch (NumberFormatException e)
+            {
                 System.out.println("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
             }
 
-            if (!(0 < numAr1 && numAr1 <= 10) || !(0 < numAr2 && numAr2 <= 10)) {
+            if (!(0 < numAr1 && numAr1 <= 10) || !(0 < numAr2 && numAr2 <= 10)) 
+            {
                 throw new Exception("Допустимы числа от 1 до 10");
             }
-            switch (numbers[1]) {
+            switch (numbers[1]) 
+            {
                 case "-" -> result = numAr1 - numAr2;
                 case "+" -> result = numAr1 + numAr2;
                 case "*" -> result = numAr1 * numAr2;
