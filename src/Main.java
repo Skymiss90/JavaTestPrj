@@ -58,7 +58,8 @@ public class Main
             RomansNumbers convert = new RomansNumbers();
             int operand1 = convert.romanToArabic(numbers[0]);
             int operand2 = convert.romanToArabic(numbers[2]);
-            switch (numbers[1]) {
+            switch (numbers[1]) 
+            {
                 case "-" -> result = operand1 - operand2;
                 case "+" -> result = operand1 + operand2;
                 case "*" -> result = operand1 * operand2;
@@ -75,7 +76,8 @@ public class Main
         {
             int numAr1 = 0;
             int numAr2 = 0;
-            try {
+            try 
+            {
                 numAr1 = Integer.parseInt(numbers[0]);
                 numAr2 = Integer.parseInt(numbers[2]);
             } 
