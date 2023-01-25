@@ -27,6 +27,8 @@ public class Main
                 case "VIII" -> numR = 8;
                 case "IX" -> numR = 9;
                 case "X" -> numR = 10;
+                case "L" -> numR = 50;
+                case "C" -> numR = 100;
                 default -> throw new Exception("Введено недопустимое значение");
             }
             return numR;
@@ -37,7 +39,13 @@ public class Main
         {
             String[] romanNum = 
             {
-                    "O", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"
+                    "O", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX",
+                    "XXI", "XXII", "XXIII", "XXIV", "XXV", "XXVI", "XXVII", "XXVIII", "XXIX", "XXX", "XXXI", "XXXII", "XXXIII", "XXXIV", "XXXV", "XXXVI", "XXXVII", "XXXVIII", "XXXIX", "XL",
+                    "XLI", "XLII", "XLIII", "XLIV", "XLV", "XLVI", "XLVII", "XLVIII", "XLIX", "L", "LI","LII", "LIII","LIV", "LV",
+                    "LVI","LVII","LVIII", "LIX", "LX", "LXI", "LXII", "LXIII", "LXIX", "LXV","LXVI", "LXVII","LXVIII", "LXIX","LXX",
+                    "LXXI","LXXII","LXXIII","LXXIV","LXXV","LXXVI","LXXVII","LXXVIII","LXXIX","LXXX", "LXXXI", "LXXXII","LXXXIII", "LXXXIV",
+                    "LXXXV", "LXXXVI", "LXXXVII","LXXXVIII","LXXXIX","XC","XCI","XCII","XCIII","XCIV","XCV","XCVI","XCVII","XCVIII",
+                    "XCIX","C"
             };
             return romanNum[num];
         }
@@ -86,7 +94,7 @@ public class Main
                 System.out.println("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
             }
 
-            if (!(0 < numAr1 && numAr1 <= 10) || !(0 < numAr2 && numAr2 <= 10)) 
+            if (!(0 < numAr1 && numAr1 <= 10) || !(0 < numAr2 && numAr2 <= 10))
             {
                 throw new Exception("Допустимы числа от 1 до 10");
             }
